@@ -7,7 +7,7 @@ const HOOK_JS_WRITE_PATH: &str = "./node/raven/hook.js"; //path to hook.js in un
 #[cfg(feature = "no_embed")]
 const NO_EMBED_HOOK_JS_PATH: &str = "./hook.js"; // if no_emded feature is enabled, this file will be used in runtime
 #[cfg(not(feature = "no_embed"))]
-const EMBED_HOOK_JS_BYTES: &[u8] = include_bytes!("hooklog.js");   // embedded hooking code file,will be embedded in binary file
+const EMBED_HOOK_JS_BYTES: &[u8] = include_bytes!("hook.js");   // embedded hooking code file,will be embedded in binary file
 const INJECT_JS_PATH: &str = "./node/raven/index.js"; //path for unpacked module to inject code into,if you want inject code into another module, change it here and in HOOK_JS_WRITE_PATH
 
 
